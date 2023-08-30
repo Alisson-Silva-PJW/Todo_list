@@ -19,7 +19,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <div>
+        <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Todo" element={<Todo />} />
