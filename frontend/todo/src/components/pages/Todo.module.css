@@ -1,4 +1,48 @@
 .container {
-  color: blue;
   height: 75vh;
+  font-size: 25px;
+}
+
+.form {
+  color: black;
+}
+
+.input_group {
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.input_box {
+  color: blue;
+  padding: 5px;
+}
+
+.input_box label{
+  padding-right:10px ;
+}
+
+.btn_add {
+  color: blue;
+}
+
+.todos {
+  background-color: red;
+  padding: 2em 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.todos strong {
+  color: black;
+}
+
+.item {
+  color: red;
+  background-color: antiquewhite;
+  margin: 15px;
+  border-radius: 7px;
 }
