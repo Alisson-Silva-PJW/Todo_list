@@ -1,3 +1,4 @@
+/*FORMULARIO*/
 .container {
   height: 75vh;
   font-size: 25px;
@@ -20,29 +21,75 @@
   padding: 5px;
 }
 
-.input_box label{
-  padding-right:10px ;
+.input_box label {
+  padding-right: 10px;
 }
 
 .btn_add {
   color: blue;
 }
 
+/* TAREFAS RENDERIZADAS*/
+
 .todos {
-  background-color: red;
   padding: 2em 2em;
+  display: flex;
+}
+
+.todos table {
+  width: 100%;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  background-color: rgb(235, 181, 4);
+  text-align: justify;
+}
+
+.todos table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.todos th,
+td {
+  padding: 0px 10px 0px 10px;
+}
+
+.todos th {
+  background-color: rgb(255, 174, 0);
+}
+
+.todos td {
+  background-color: rgb(248, 232, 232);
+  color: black;
+  height: 2em;
+}
+
+.actions {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 20px;
+  color: black;
+  margin-left: 15px;
+}
+
+.category,
+.priority,
+.actions {
   text-align: center;
 }
 
-.todos strong {
-  color: black;
+.tarefa,
+.cat,
+.pri {
+  text-align: center;
 }
 
-.item {
-  color: red;
-  background-color: antiquewhite;
-  margin: 15px;
-  border-radius: 7px;
+.tarefa {
+  width: 70%;
+  text-align: center;
 }

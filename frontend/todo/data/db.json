@@ -10,13 +10,25 @@
       "id": 2,
       "task": "Estudar javaScript",
       "category": "Estudos",
-      "priority": "Média"
+      "priority": "Media"
     },
     {
       "id": 3,
-      "task": "Fazer troca de fonte de alimentação",
+      "task": "Fazer troca de fonte de alimentação asdasdasd asdasdasdas asdasd adasd ada a asdasda asdasda ada dasd asasdwd asd as dawdad ad wda dw ad wd ad d dadwdadwadawd adawdawdawd ad wad adawd adawd adaw ad awd adawd dawdwa dd adwad ada ddawd adawda daadaw dadaw d wad ad dwa d wadad awd awwad awdwa asdwads dwad  wda  wd a",
       "category": "Trabalho",
       "priority": "Baixa"
+    },
+    {
+      "task": "Novo Teste",
+      "priority": "Alta",
+      "category": "Estudos",
+      "id": 4
+    },
+    {
+      "task": "Fazer camiada caramba",
+      "priority": "Alta",
+      "category": "Pessoal",
+      "id": 5
     }
   ]
 }
