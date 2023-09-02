@@ -4,7 +4,7 @@ import styles from "../layout/Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.container}>
-      <h1>FOOTER</h1>
+      <h1>...</h1>
     </footer>
   );
 };

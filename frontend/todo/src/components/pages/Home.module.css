@@ -1,4 +1,49 @@
 .container {
-  color: brown;
+  display: flex;
   height: 75vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.add_todo {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.add_todo h1 {
+  margin: 15px;
+  font-size: 3em;
+}
+
+.add_todo h3 {
+  margin: 25px;
+  font-size: 1.5em;
+}
+
+.add_todo p {
+  margin: 25px;
+  font-size: 1.5em;
+}
+
+.add_todo span {
+  background-color: rgba(178, 247, 220, 0.87);
+  border-radius: 15px;
+  color: #000000;
+  cursor: pointer;
+  padding: 7px 20px;
+  text-align: center;
+  transition: all 250ms;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add_todo a {
+  text-decoration: none;
+}
+
+.add_todo span:hover {
+  background-color: rgb(145, 199, 45);
 }

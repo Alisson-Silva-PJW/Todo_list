@@ -1,13 +1,14 @@
 .container {
   display: flex;
   justify-content: space-between;
-  padding: .5em 4em .5em;
-  background-color: aqua;
+  padding: 0.5em 4em 0.5em;
+  background-color: rgb(110, 160, 160);
   border-bottom: 2px solid #a12;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  font-size: 1.5em;
 }
 
 .logo img {
@@ -28,5 +29,5 @@
 }
 
 .item :hover {
-  color: blue;
+  color: #fff;
 }

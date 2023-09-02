@@ -7,6 +7,7 @@ import axios from "axios";
 //MOCULE CSS DA PAGINA TODO
 import styles from "../pages/Todo.module.css";
 
+//ICONS
 import { FiEdit } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 
@@ -20,6 +21,7 @@ const Todo = () => {
   const [task, setTask] = useState("");
   const [category, setCategory] = useState("");
   const [priority, setPriority] = useState("");
+  const [taskEdit, setTaskEdit] = useState("");
 
   //Consuminto os dados do banco
   const getTodos = async () => {
@@ -41,18 +43,31 @@ const Todo = () => {
 
     const todo = ref.current;
 
-    await axios.post(url, {
-      task: todo.task.value,
-      priority: todo.priority.value,
-      category: todo.category.value,
-    });
+    if (taskEdit) {
+      await axios.put(url + "/" + taskEdit.id, {
+        task: todo.task.value,
+        priority: todo.priority.value,
+        category: todo.category.value,
+      });
+    } else {
+      await axios.post(url, {
+        task: todo.task.value,
+        priority: todo.priority.value,
+        category: todo.category.value,
+      });
+    }
 
     //CARREGAMENTO DINAMICO
+    getTodos();
+
+    setTaskEdit("");
+    setTask("");
+    setCategory("");
+    setPriority("");
   };
 
   //DELETANDO DADOS
   const deleteTask = async (id) => {
-    console.log(id);
     await axios.delete(url + "/" + id).then(() => {
       const newArray = todos.filter((todo) => todo.id !== id);
 
@@ -60,14 +75,30 @@ const Todo = () => {
     });
   };
 
+  //USE EFFECT EDIÇÃO
+  useEffect(() => {
+    if (taskEdit) {
+      const todo = ref.current;
+
+      todo.task.value = taskEdit.task;
+      todo.priority.value = taskEdit.priority;
+      todo.category.value = taskEdit.category;
+    }
+  }, [taskEdit]);
+
+  //EDITANDO DADOS DA LISTA
+  const editTask = async (todo) => {
+    setTaskEdit(todo);
+  };
+
   return (
     <div className={styles.container}>
-      <h1>Lista de Tarefas</h1>
+      <h1>LISTA DE TAREFAS</h1>
       <div className={styles.form}>
         <form ref={ref} onSubmit={handleSubmit}>
           <div className={styles.input_group}>
             <div className={styles.input_box}>
-              <label htmlFor="task">Tarefa:</label>
+              <label htmlFor="task">Tarefa</label>
               <input
                 id="task"
                 type="text"
@@ -80,7 +111,7 @@ const Todo = () => {
             </div>
 
             <div className={styles.input_box}>
-              <label htmlFor="category">Categoria:</label>
+              <label htmlFor="category">Categoria</label>
               <select
                 name="category"
                 id="category"
@@ -96,7 +127,7 @@ const Todo = () => {
             </div>
 
             <div className={styles.input_box}>
-              <label htmlFor="priority">Prioridade:</label>
+              <label htmlFor="priority">Prioridade</label>
               <select
                 name="priority"
                 id="priority"

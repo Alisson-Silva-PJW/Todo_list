@@ -1,4 +1,11 @@
 .container {
-  background-color: aqua;
+  background-color: rgb(110, 160, 160);
   border-top: 2px solid #a12;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
